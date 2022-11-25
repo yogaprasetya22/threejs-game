@@ -21,24 +21,24 @@ class ClassDasar {
 
         this._models = {
             tenda: {
-                obj: "../model/tentClosed.obj",
-                mtl: "../model/tentClosed.mtl",
+                obj: "./model/tentClosed.obj",
+                mtl: "./model/tentClosed.mtl",
                 x: -4.5,
                 y: -0.5,
                 z: 1.5,
                 mesh: null,
             },
             tong: {
-                obj: "../model/barrelOpen.obj",
-                mtl: "../model/barrelOpen.mtl",
+                obj: "./model/barrelOpen.obj",
+                mtl: "./model/barrelOpen.mtl",
                 x: 6.5,
                 y: -0.5,
                 z: -3.5,
                 mesh: null,
             },
             jemuran: {
-                obj: "../model/structureCloth.obj",
-                mtl: "../model/structureCloth.mtl",
+                obj: "./model/structureCloth.obj",
+                mtl: "./model/structureCloth.mtl",
                 x: 3.5,
                 y: -0.5,
                 z: 6.5,
@@ -311,7 +311,7 @@ class ClassDasar {
          <div class="container">
     <div class="github">
       <a href="https://github.com/yogaprasetya22/threejs-game" target="_blank">
-        <img src="./resources/github.png" alt="github"> Github
+        <img src="./assets/github.png" alt="github"> Github
       </a>
     </div>
   </div>
