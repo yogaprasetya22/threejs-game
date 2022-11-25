@@ -61,8 +61,8 @@ class ClassDasar {
         let ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
         this._scene.add(ambientLight);
 
-        const pointLight = new THREE.PointLight(0xffffff, 0.6, 138);
-        pointLight.position.set(-3, 26, -3);
+        const pointLight = new THREE.PointLight(0xffffff, 0.8, 18);
+        pointLight.position.set(-3, 6, -3);
         pointLight.castShadow = true;
         pointLight.shadow.camera.near = 0.1;
         pointLight.shadow.camera.far = 25;

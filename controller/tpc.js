@@ -208,7 +208,7 @@ class ClassDasar {
             }
         });
 
-        console.log(this._meshes)
+        console.log(this._meshes);
 
         this._REF();
     }
@@ -216,6 +216,9 @@ class ClassDasar {
     _BOTAI() {
         this._aigoal = undefined;
         this._aiMesh = undefined;
+        this._jumlahBot = {
+            
+        }
         this.time = 0;
         this.newPosition = new THREE.Vector3();
         this.matrix = new THREE.Matrix4();
@@ -309,6 +312,8 @@ class ClassDasar {
             this._camera.updateProjectionMatrix(),
             this._renderer.setSize(window.innerWidth, window.innerHeight);
     }
+    
+    
     _REF() {
         requestAnimationFrame(() => {
             let speed = 0.0;
