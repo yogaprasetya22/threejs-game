@@ -3,3 +3,35 @@ canvas {
   top     : 0;
   left    : 0;
 }
+
+.container {
+  position        : fixed;
+  z-index         : 2;
+  top             : 0;
+  right           : 0;
+  background-color: #a0a0a0;
+  width           : 10rem;
+  border-radius   : 3px;
+}
+
+.container .github {
+  padding: 3px;
+}
+
+.container .github a {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  gap            : 12px;
+  text-decoration: none;
+  color          : black;
+}
+
+.container .github a:hover {
+  color: white;
+}
+
+.container .github img {
+  width: 2rem;
+
+}

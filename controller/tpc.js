@@ -10,6 +10,7 @@ class ClassDasar {
         this._Initialize();
         this._BOTAI();
         this._LINGKUNGAN();
+        this._link();
     }
 
     _Initialize() {
@@ -216,9 +217,7 @@ class ClassDasar {
     _BOTAI() {
         this._aigoal = undefined;
         this._aiMesh = undefined;
-        this._jumlahBot = {
-            
-        }
+        this._jumlahBot = {};
         this.time = 0;
         this.newPosition = new THREE.Vector3();
         this.matrix = new THREE.Matrix4();
@@ -307,13 +306,24 @@ class ClassDasar {
         this._scene.add(this._meshes["jemuran"]);
     }
 
+    _link() {
+        document.getElementById("add").innerHTML = `
+         <div class="container">
+    <div class="github">
+      <a href="https://github.com/yogaprasetya22/threejs-game" target="_blank">
+        <img src="./resources/github.png" alt="github"> Github
+      </a>
+    </div>
+  </div>
+        `;
+    }
+
     _OnWindowResize() {
         (this._camera.aspect = window.innerWidth / window.innerHeight),
             this._camera.updateProjectionMatrix(),
             this._renderer.setSize(window.innerWidth, window.innerHeight);
     }
-    
-    
+
     _REF() {
         requestAnimationFrame(() => {
             let speed = 0.0;
