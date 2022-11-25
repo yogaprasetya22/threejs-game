@@ -145,7 +145,7 @@ class ClassDasar {
         this._mesh.add(new THREE.AxesHelper(2));
 
         this._character = new OBJLoader().load(
-            "../model/conz.obj",
+            "./model/conz.obj",
             (object) => {
                 object.traverse((child) => {
                     if (child instanceof THREE.Mesh) {
