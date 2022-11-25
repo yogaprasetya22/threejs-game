@@ -314,7 +314,7 @@ class ClassDasar {
         <img src="./assets/github.png" alt="github"> Github
       </a>
     </div>
-  </div>
+  </div> 
         `;
     }
 
