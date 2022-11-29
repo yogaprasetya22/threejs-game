@@ -115,8 +115,10 @@ class ClassDasar {
         };
         this._loading.onLoad = () => {
             console.log("Loading Complete");
-            this._resource_load = true;
-            this._onLoadLingkungan();
+            setTimeout(() => {
+                this._resource_load = true;
+                this._onLoadLingkungan();
+            }, 1000);
         };
 
         let ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -144,7 +146,7 @@ class ClassDasar {
         this._mesh.position.set(0, this._player.top - 1, 0);
         this._mesh.add(new THREE.AxesHelper(2));
 
-        this._character = new OBJLoader().load(
+        this._character = new OBJLoader(this._loading).load(
             "./model/conz.obj",
             (object) => {
                 object.traverse((child) => {
@@ -262,13 +264,7 @@ class ClassDasar {
                                 child.receiveShadow = true;
                             }
                         });
-                        object.position.set(
-                            models[key].x,
-                            models[key].y,
-                            models[key].z
-                        );
                         object.scale.set(3.5, 3.5, 3.5);
-                        scene.add(object);
                         models[key].mesh = object;
                     });
                 });
@@ -374,7 +370,10 @@ class ClassDasar {
                 this._loadingScreen.box.rotation.y = Math.sin(
                     this._loadingScreen.box.position.z / 2
                 );
-                this._renderer.render(this._scene, this._camera);
+                this._renderer.render(
+                    this._loadingScreen.scene,
+                    this._loadingScreen.camera
+                );
                 // this._REF();
                 return;
             });
